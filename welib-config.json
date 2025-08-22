@@ -1,0 +1,49 @@
+{
+  "baseUrl": "https://welib.org",
+  "capturedAt": "2025-08-22T13:45:00.000Z",
+  "description": "Welib.org selectors captured from user manual inspection",
+  "flow": {
+    "step1": "Click book title to go to book page",
+    "step2": "Click download button to start download process", 
+    "step3": "Wait for countdown timer (up to 300+ seconds)",
+    "step4": "Click final download link when timer completes"
+  },
+  "selectors": {
+    "bookTitles": [
+      "h2.font-semibold.text-md.md\\:text-lg.dark\\:text-slate-300.dark\\:hover\\:text-slate-100.line-clamp-3.mb-1.w-full.owa",
+      "h2.font-semibold"
+    ],
+    "downloadButtons": [
+      "a.js-download-link",
+      ".js-download-link",
+      "a[href*='/slow_download/']"
+    ],
+    "finalDownloadLinks": [
+      "a[href*='welib-public.org']",
+      "a[href$='.pdf']",
+      "p.mb-4.text-xl.font-bold a"
+    ],
+    "waitingElements": [
+      ".js-partner-countdown",
+      "div.mb-4.dark\\:text-slate-100.font-bold.text-xl"
+    ]
+  },
+  "timing": {
+    "pageLoad": [3000, 7000],
+    "betweenBooks": [8000, 15000],
+    "downloadWait": [290000, 310000],
+    "afterDownload": [10000, 20000]
+  },
+  "patterns": {
+    "bookPageUrls": "/book/",
+    "downloadUrls": "/slow_download/",
+    "fileUrls": "welib-public.org",
+    "countdownText": "Please wait * seconds to download"
+  },
+  "humanBehavior": {
+    "scrollBeforeClick": true,
+    "hoverBeforeClick": true,
+    "randomMouseMovements": true,
+    "varyClickTiming": true
+  }
+}

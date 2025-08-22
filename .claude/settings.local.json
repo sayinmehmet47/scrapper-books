@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:welib.org)",
+      "Bash(npm install)",
+      "Bash(npm start)",
+      "Bash(npx puppeteer browsers:*)",
+      "Bash(node:*)",
+      "Bash(npm run:*)",
+      "Bash(open /Users/mehmetsayin/projects/scrapper-books/src/manual-selector-capture.html)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
