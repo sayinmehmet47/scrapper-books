@@ -4,20 +4,20 @@
   "description": "Automated book scraper for welib.org",
   "main": "src/welib-scraper.js",
   "scripts": {
-    "start": "node src/welib-scraper.js",
-    "parallel": "node src/welib-scraper.js --parallel",
-    "schedule": "node src/scheduler.js"
+    "start": "node src/welib-scraper.js"
   },
   "dependencies": {
+    "axios": "^1.6.2",
+    "fs-extra": "^11.2.0",
     "puppeteer": "^21.5.2",
     "puppeteer-extra": "^3.3.6",
-    "puppeteer-extra-plugin-stealth": "^2.11.2",
-    "axios": "^1.6.2",
-    "cheerio": "^1.0.0-rc.12",
-    "fs-extra": "^11.2.0",
-    "node-cron": "^3.0.3"
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
   },
-  "keywords": ["scraper", "books", "automation"],
+  "keywords": [
+    "scraper",
+    "books",
+    "automation"
+  ],
   "author": "",
   "license": "MIT"
 }
